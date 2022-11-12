@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "title": "Which of the following is for react performance?",
+        "inputType": "radio",
+        "refName": "q1",
+        "isComplete": false,
+        "correctAnswer": "Virtual DOM",
+        "options":  [ 
+            {
+                "id": "q1opt1",
+                "value": "Virtual DOM",
+                "isSelected": false,
+                "isCorrect": true
+            },
+            {
+                "id": "q1opt2",
+                "value": "Original DOM",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q1opt3",
+                "value": "Both",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q1opt4",
+                "value": "None",
+                "isSelected": false,
+                "isCorrect": false
+            }
+        ]       
+    },
+    {
+        "id": 2,
+        "title": "In which language is ReactJS written?",
+        "inputType": "radio",
+        "refName": "q2",
+        "isComplete": false,
+        "correctAnswer": "Javascript",
+        "options":  [ 
+            {
+                "id": "q2opt1",
+                "value": "Java",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q2opt2",
+                "value": "PHP",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q2opt3",
+                "value": "Javascript",
+                "isSelected": false,
+                "isCorrect": true
+            },
+            {
+                "id": "q2opt4",
+                "value": "Python",
+                "isSelected": false,
+                "isCorrect": false
+            }
+        ] 
+    }
+]
