@@ -15,7 +15,12 @@ function App() {
     let mapped = listQuestions
     .map(currentQuestion => {
       if (currentQuestion.id === questionId) {
-        currentQuestion = { ...currentQuestion, isComplete: !currentQuestion.isComplete }
+        currentQuestion = { 
+          ...currentQuestion, 
+          isComplete: !currentQuestion.isComplete,
+          answer: answer,
+          successfull: answer.toLowerCase() === currentQuestion.correctAnswer.toLowerCase()
+        }
         if(optionId){
           currentQuestion.options = currentQuestion.options.map(option => {
             option.isSelected = false;
@@ -39,35 +44,10 @@ function App() {
       <main className='main'>
         <div>
         <div className='question-block description'>
-          For doing this, LOM brings you a document with the specific requirements of the program, which content is:
-            <ul>
-              <li>
-                The program must ask the user at least ten questions with only one correct answer.
-              </li>
-              <li>
-                The questions can be of any kind: a calculation, choose one from multiple choices, text answer, or whatever. But always with a single correct answer.<br/>For example:
-                <ul>
-                  <li><i>"What is the current year?"</i> with a number input.</li>
-                  <li><i>"12 / 4 ="</i> and a selector with options 4, 3, 5.</li>
-                  <li><i>"What is the surname of the leading creator of relativity theory called Albert?"</i> with a text inputfor type Einstein</li>
-                </ul>
-              </li>
-              <li>
-                The program must contain at least two different kinds of questions.
-              </li>
-              <li>
-                The user will have only one chance to answer each question.
-              </li>
-              <li>
-                There must be feedback for the user's answer, and if it's wrong, the program must display the correct answer.
-              </li>
-              <li>
-                The program must track user progress to display the answered questions.
-              </li>
-              <li>
-                When the user answers all the questions, the program must display the result of the tests giving him a value of his worthiness.
-              </li>
-          </ul>
+        The questions will be displayed one by one. Tick the answer you think is the right one and click on the "submit" button to validate your answer. Once you validate your answer you will not be able to change it again.
+        When you answer all the questions, a list of all your answers will be displayed with a summary of the results.
+        <br/>
+        Good luck &#129310;&#127996;
         </div>
         
         </div>

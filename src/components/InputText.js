@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const InputText = ({refName, setSelectedOption, isComplete }) => {
-    const [value, setValue] = useState('')  
+const InputText = ({refName, setSelectedOption, isComplete, answer }) => {
+    const [value, setValue] = useState(answer)  
 
     const handleChange = (event) => {    
         setValue(event.target.value);        

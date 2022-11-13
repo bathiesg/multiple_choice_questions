@@ -21,19 +21,17 @@ const Question = ({question, handleResponse}) => {
             case 'radio':
             return question.options.map(inputOption => <InputRadio isComplete={question.isComplete} labelOption={inputOption} key={inputOption.id} refName={question.refName} setSelectedOption={setSelectedOption}/>)
             case 'select':
-            return <SelectForm options={question.options} isComplete={question.isComplete} refName={question.refName} setSelectedOption={setSelectedOption}/>
+            return <SelectForm options={question.options} isComplete={question.isComplete} refName={question.refName} setSelectedOption={setSelectedOption} answer={question.answer}/>
             case 'text':
-                return <InputText isComplete={question.isComplete} refName={question.refName} setSelectedOption={setSelectedOption}/>
+                return <InputText isComplete={question.isComplete} refName={question.refName} setSelectedOption={setSelectedOption} answer={question.answer}/>
             default:
             return null
         }
     }
     const getUserAnswer = () => {
-        const answer = selectedOption?.answer || ''
-        const hasFound = answer.toLowerCase() === question.correctAnswer.toLowerCase()
         return(
             <div className='results-message'>
-                <h5 className={hasFound ? 'success-answer' : 'error-answer'} style={{margin: 0}}>{hasFound ? 'Correct!' : 'Incorrect!'}</h5>
+                <h5 className={question.successfull ? 'success-answer' : 'error-answer'} style={{margin: 0}}>{question.successfull ? 'Correct!' : 'Incorrect!'}</h5>
                 <p style={{margin: 0}}>Response is: <small>{question.correctAnswer}</small></p>
             </div>
         )

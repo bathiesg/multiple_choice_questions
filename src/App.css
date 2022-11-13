@@ -3,12 +3,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
   min-height: 100vh;
+  padding: 50px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  
+  /* padding-bottom: 50px; */
   
 }
 

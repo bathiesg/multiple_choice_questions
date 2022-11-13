@@ -6,6 +6,8 @@
         "refName": "q1",
         "isComplete": false,
         "correctAnswer": "Virtual DOM",
+        "answer": "",
+        "successfull": false,
         "options":  [ 
             {
                 "id": "q1opt1",
@@ -40,6 +42,8 @@
         "refName": "q2",
         "isComplete": false,
         "correctAnswer": "Javascript",
+        "answer": "",
+        "successfull": false,
         "options":  [ 
             {
                 "id": "q2opt1",
@@ -74,6 +78,8 @@
         "refName": "q3",
         "isComplete": false,
         "correctAnswer": "Facebook",
+        "answer": "",
+        "successfull": false,
         "options":  [ 
             {
                 "id": "q3opt1",
@@ -108,6 +114,8 @@
         "refName": "q4",
         "isComplete": false,
         "correctAnswer": "9",
+        "answer": "",
+        "successfull": false,
         "options": [] 
     }
 ]
