@@ -29,19 +29,20 @@ const Question = ({question, handleResponse}) => {
         }
     }
     const getUserAnswer = () => {
+        const messageType = question.successfull ? "success" : "error"
         return(
-            <div className='results-message'>
-                <h5 className={question.successfull ? 'success-answer' : 'error-answer'} style={{margin: 0}}>{question.successfull ? 'Correct!' : 'Incorrect!'}</h5>
+            <div className={"results-message " +  messageType}>
+                <h5 style={{margin: 0}}>{question.successfull ? 'Correct!' : 'Incorrect!'}</h5>
                 <p style={{margin: 0}}>Response is: <small>{question.correctAnswer}</small></p>
             </div>
         )
     }
    return (
        <div className="question-block ">
-            <h3>{question.title}</h3>
-            <form style={{display: 'flex', flexDirection: 'column', width: 'fit-content'}}>
+            <h3 style={{marginBottom: "10px"}}>{question.title}</h3>
+            <form className='Question-form'>
                 { formSelector() }          
-                <button className="btn btn-default Submit-button" type="button" onClick={handleClick}> Submit </button>
+                <button className="btn btn-default Submit-button" disabled={question.isComplete} type="button" onClick={handleClick}> Submit </button>
             </form>
           { question.isComplete && getUserAnswer() }
         </div>

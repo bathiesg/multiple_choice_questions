@@ -117,5 +117,207 @@
         "answer": "",
         "successfull": false,
         "options": [] 
+    },
+    {
+        "id": 5,
+        "title": "Does React.js create a VIRTUAL DOM in the memory?",
+        "inputType": "radio",
+        "refName": "q5",
+        "isComplete": false,
+        "correctAnswer": "TRUE",
+        "answer": "",
+        "successfull": false,
+        "options":  [ 
+            {
+                "id": "q5opt1",
+                "value": "TRUE",
+                "isSelected": false,
+                "isCorrect": true
+            },
+            {
+                "id": "q5opt2",
+                "value": "FALSE",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q5opt3",
+                "value": "Can be true or false",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q5opt4",
+                "value": "Cannot say",
+                "isSelected": false,
+                "isCorrect": false
+            }
+        ] 
+    },
+    {
+        "id": 6,
+        "title": "Which of the following is used to pass data to a component from outside in React.js?",
+        "inputType": "select",
+        "refName": "q6",
+        "isComplete": false,
+        "correctAnswer": "Props",
+        "answer": "",
+        "successfull": false,
+        "options":  [ 
+            {
+                "id": "q6opt1",
+                "value": "SetState",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q6opt2",
+                "value": "Render with arguments",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q6opt3",
+                "value": "Props",
+                "isSelected": false,
+                "isCorrect": true
+            },
+            {
+                "id": "q6opt4",
+                "value": "PropTypes",
+                "isSelected": false,
+                "isCorrect": false
+            }
+        ] 
+    },
+    {
+        "id": 7,
+        "title": "We can update the state in React.js by calling to setState() method. These calls are:",
+        "inputType": "select",
+        "refName": "q7",
+        "isComplete": false,
+        "correctAnswer": "Asynchronous in nature.",
+        "answer": "",
+        "successfull": false,
+        "options":  [ 
+            {
+                "id": "q7opt1",
+                "value": "Synchronous in nature.",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q7opt2",
+                "value": "Asynchronous in nature.",
+                "isSelected": false,
+                "isCorrect": true
+            },
+            {
+                "id": "q7opt3",
+                "value": "Are asynchronous but can be made synchronous when required.",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q7opt4",
+                "value": "None of the above.",
+                "isSelected": false,
+                "isCorrect": false
+            }
+        ] 
+    },
+    {
+        "id": 8,
+        "title": "What is the most populous city in the world? ",
+        "inputType": "text",
+        "refName": "q8",
+        "isComplete": false,
+        "correctAnswer": "Tokyo",
+        "answer": "",
+        "successfull": false,
+        "options": [] 
+    },
+    {
+        "id": 9,
+        "title": "Among the following which is used to create a class inheritance?",
+        "inputType": "select",
+        "refName": "q9",
+        "isComplete": false,
+        "correctAnswer": "Extends",
+        "answer": "",
+        "successfull": false,
+        "options":  [ 
+            {
+                "id": "q9opt1",
+                "value": "Inherits",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q9opt2",
+                "value": "Extends",
+                "isSelected": false,
+                "isCorrect": true
+            },
+            {
+                "id": "q9opt3",
+                "value": "Create",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q9opt4",
+                "value": "this",
+                "isSelected": false,
+                "isCorrect": false
+            }
+        ] 
+    },
+    {
+        "id": 10,
+        "title": "Which of the following are two ways to handle data in react?",
+        "inputType": "radio",
+        "refName": "q10",
+        "isComplete": false,
+        "correctAnswer": "State and props",
+        "answer": "",
+        "successfull": false,
+        "options":  [ 
+            {
+                "id": "q10opt1",
+                "value": "Services and components",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q10opt2",
+                "value": "State and props",
+                "isSelected": false,
+                "isCorrect": true
+            },
+            {
+                "id": "q10opt3",
+                "value": "State and services",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q10opt4",
+                "value": "State and components",
+                "isSelected": false,
+                "isCorrect": false
+            }
+        ] 
+    },
+    {
+        "id": 11,
+        "title": "Who is the world's oldest programmer? ",
+        "inputType": "text",
+        "refName": "q11",
+        "isComplete": false,
+        "correctAnswer": "Masako Wakamiya",
+        "answer": "",
+        "successfull": false,
+        "options": [] 
     }
 ]
