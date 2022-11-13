@@ -45,7 +45,7 @@
 /* .Submit-button:disabled {
   background: rgb(162, 199, 236);
 } */
-/*
+
 input:where([type="checkbox"], [type="radio"]){
   -webkit-appearance : none;
   appearance         : none;
@@ -65,14 +65,14 @@ input:where([type="checkbox"], [type="radio"]):where(:active:not(:disabled), :fo
   outline      : none;
 }
 
-input:where([type="checkbox"], [type="radio"]):disabled{
+/* input:where([type="checkbox"], [type="radio"]):disabled{
   background : #eee;
-}
+} */
 
 input[type="radio"]:checked{
   background-image : url('checkbox.svg');
 }
-*/
+
 
 .question-block {
   width: 50vw;
@@ -100,4 +100,13 @@ input[type="radio"]:checked{
   width: max-content;
   font-weight: 400;
   font-size: 80%;
+}
+
+.form-input {
+  padding: 7px 20px;
+
+}
+.form-input:disabled {
+font-weight: normal;
+color: lightgrey;
 }

@@ -12,7 +12,8 @@ const InputText = ({refName, setSelectedOption, isComplete }) => {
    
       return (
         <label>
-            <input type="text" 
+            <input type="text"
+                className="form-input"
                 name={refName}
                 value={value}
                 onChange={handleChange} 

@@ -17,7 +17,7 @@ const SelectForm = ({options, refName, setSelectedOption, isComplete }) => {
    
       return (
         <label>
-            <select value={value} onChange={handleChange} disabled={isComplete}>  
+            <select name={refName} value={value} onChange={handleChange} disabled={isComplete} className="form-input">  
                 {options.map(option => <option optionid={option.id} key={option.id} value={option.value}>{option.value}</option>)}          
             </select>
         </label>
