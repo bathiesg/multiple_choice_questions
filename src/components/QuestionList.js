@@ -2,12 +2,11 @@ import React from 'react';
 import Question from './Question';
 
 const Questionlist = ({questions, handleResponse}) => {
-    const totalQuestions = questions.length
-    const allComplete = questions.filter(e => e.isComplete)
-    const isAllCompleted = allComplete.length ===  totalQuestions
-    const nextQuestion = questions.find(e => e.isComplete === false)
-    const successfulled = questions.filter(e => e.successfull).length
-    console.log(successfulled)
+    const totalQuestions = questions.length;
+    const allCompleted = questions.filter((e) => e.isComplete).length;
+    const isAllCompleted = allCompleted === totalQuestions;
+    const nextQuestion = questions.find((e) => e.isComplete === false);
+    const successfulled = questions.filter((e) => e.successfull).length;
    return (
        <div>
         
@@ -20,18 +19,20 @@ const Questionlist = ({questions, handleResponse}) => {
                 }):
                 <Question key={nextQuestion.id} question={nextQuestion} handleResponse={handleResponse}/>
             }
-            <hr className='question-block' style={{marginTop: '15px'}}/>
+            <hr className='question-block horizontal-rule' style={{marginTop: '15px'}}/>
 
-            <div className='question-block' style={{display: 'flex', justifyContent: 'end'}}>
+            <div className='question-block horizontal-rule' style={{display: 'flex', justifyContent: 'end'}}>
                 <div className="score" style={{background: 'darkslategray', padding: '7.5px 15px'}}>
-                    <div>Score : {allComplete.length + '/' + totalQuestions}</div>
                     {
-                        isAllCompleted && 
+                        isAllCompleted ?
                         <small> 
                             <span className="success-answer"> correct: {successfulled + '/' + totalQuestions     }</span>
                             <br/> 
                             <span className="error-answer"> incorrect: { totalQuestions - successfulled + '/' + totalQuestions     } </span>
                         </small>
+                        :
+                        <div>Progress : {allCompleted + '/' + totalQuestions}</div>
+
                     }
                 </div>
                 
