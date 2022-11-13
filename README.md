@@ -1,6 +1,3 @@
-# Restore questions
-If all questions are answered, delete the local storage `listQuestions` data and reload as shown on the image ![image](https://user-images.githubusercontent.com/14812777/201551145-ca7e5491-7893-4e55-95be-9f296700b4de.png)
-
 # Credits
 
 Design and questions [InterviewBit](https://www.interviewbit.com/react-mcq/).
