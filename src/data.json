@@ -66,5 +66,48 @@
                 "isCorrect": false
             }
         ] 
+    },
+    {
+        "id": 3,
+        "title": "Which company has created React",
+        "inputType": "select",
+        "refName": "q3",
+        "isComplete": false,
+        "correctAnswer": "Facebook",
+        "options":  [ 
+            {
+                "id": "q3opt1",
+                "value": "Google",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q3opt2",
+                "value": "Apple",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q3opt3",
+                "value": "Microsoft",
+                "isSelected": false,
+                "isCorrect": false
+            },
+            {
+                "id": "q3opt4",
+                "value": "Facebook",
+                "isSelected": false,
+                "isCorrect": true
+            }
+        ] 
+    },
+    {
+        "id": 4,
+        "title": "What is the result of 2 + 7?",
+        "inputType": "text",
+        "refName": "q4",
+        "isComplete": false,
+        "correctAnswer": "7",
+        "options": [] 
     }
 ]

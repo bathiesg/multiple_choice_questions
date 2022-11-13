@@ -16,15 +16,15 @@ function App() {
     .map(currentQuestion => {
       if (currentQuestion.id === questionId) {
         currentQuestion = { ...currentQuestion, isComplete: !currentQuestion.isComplete }
-        currentQuestion.options = currentQuestion.options.map(option => {
-          option.isSelected = false;
-          // option.isCorrect = false;
-          if (option.id === optionId) {
-            option.isSelected = true;
-          }
-          // option.isCorrect = answer.toLowerCase() === currentQuestion.correctAnswer.toLowerCase()
-          return option;
-        })
+        if(optionId){
+          currentQuestion.options = currentQuestion.options.map(option => {
+            option.isSelected = false;
+            if (option.id === optionId) {
+              option.isSelected = true;
+            }
+            return option;
+          })
+        }
       }
       return currentQuestion;
     })

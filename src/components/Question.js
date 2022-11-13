@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import InputRadio from './InputRadio';
+import SelectForm from './SelectForm';
+import InputText from './InputText';
 
 const Question = ({question, handleResponse}) => {
     const [selectedOption, setSelectedOption] = useState(null)
@@ -14,9 +16,20 @@ const Question = ({question, handleResponse}) => {
         })
     } 
 
-
+    const formSelector = () => {
+        switch(question.inputType) {
+            case 'radio':
+            return question.options.map(inputOption => <InputRadio isComplete={question.isComplete} labelOption={inputOption} key={inputOption.id} refName={question.refName} setSelectedOption={setSelectedOption}/>)
+            case 'select':
+            return <SelectForm options={question.options} isComplete={question.isComplete} refName={question.refName} setSelectedOption={setSelectedOption}/>
+            case 'text':
+                return <InputText isComplete={question.isComplete} refName={question.refName} setSelectedOption={setSelectedOption}/>
+            default:
+            return null
+        }
+    }
     const getUserAnswer = () => {
-        const answer = question.options.filter((option) => (option.isSelected))[0].value
+        const answer = selectedOption?.answer || ''
         const hasFound = answer.toLowerCase() === question.correctAnswer.toLowerCase()
         return(
             <div className='results-message'>
@@ -28,12 +41,10 @@ const Question = ({question, handleResponse}) => {
    return (
        <div className="question-block ">
             <h3>{question.title}</h3>
-            {
-                question.options.map(inputOption => <InputRadio isComplete={question.isComplete} labelOption={inputOption} key={inputOption.id} refName={question.refName} setSelectedOption={setSelectedOption}/>)
-            }          
-            
-            <button className="btn btn-default Submit-button" type="button" disabled={question.isComplete} onClick={handleClick}> Submit </button>
-          
+            <form style={{display: 'flex', flexDirection: 'column', width: 'fit-content'}}>
+                { formSelector() }          
+                <button className="btn btn-default Submit-button" type="button" onClick={handleClick}> Submit </button>
+            </form>
           { question.isComplete && getUserAnswer() }
         </div>
    );
