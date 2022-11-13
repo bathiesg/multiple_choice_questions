@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/multiple_choice_questions/static/css/main.2bebe2bb.css",
+    "main.js": "/multiple_choice_questions/static/js/main.f8dd0de2.js",
+    "static/js/787.04054599.chunk.js": "/multiple_choice_questions/static/js/787.04054599.chunk.js",
+    "index.html": "/multiple_choice_questions/index.html",
+    "static/media/checkbox.svg": "/multiple_choice_questions/static/media/checkbox.fbd240f4e90b12139566.svg",
+    "main.2bebe2bb.css.map": "/multiple_choice_questions/static/css/main.2bebe2bb.css.map",
+    "main.f8dd0de2.js.map": "/multiple_choice_questions/static/js/main.f8dd0de2.js.map",
+    "787.04054599.chunk.js.map": "/multiple_choice_questions/static/js/787.04054599.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bebe2bb.css",
+    "static/js/main.f8dd0de2.js"
+  ]
+}
