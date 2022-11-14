@@ -26,9 +26,9 @@ const Questionlist = ({questions, handleResponse}) => {
                     {
                         isAllCompleted ?
                         <small> 
-                            <span className="success-answer"> correct: {successfulled + '/' + totalQuestions     }</span>
+                            <span className="success-answer"> Iorrect: {successfulled + '/' + totalQuestions     }</span>
                             <br/> 
-                            <span className="error-answer"> incorrect: { totalQuestions - successfulled + '/' + totalQuestions     } </span>
+                            <span className="error-answer"> Incorrect: { totalQuestions - successfulled + '/' + totalQuestions     } </span>
                         </small>
                         :
                         <div>Progress : {allCompleted + '/' + totalQuestions}</div>
