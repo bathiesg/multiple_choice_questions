@@ -8,7 +8,6 @@ const Question = ({question, handleResponse}) => {
 
     const handleClick = (e) => {
         e.preventDefault()
-        console.log(selectedOption)
 
         handleResponse({
             questionId: question.id,

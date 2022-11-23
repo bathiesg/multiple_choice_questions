@@ -7,6 +7,7 @@ const Questionlist = ({questions, handleResponse}) => {
     const isAllCompleted = allCompleted === totalQuestions;
     const nextQuestion = questions.find((e) => e.isComplete === false);
     const successfulled = questions.filter((e) => e.successfull).length;
+    const isAllCompletedClass = isAllCompleted ? " completed " : " incomplete "
    return (
        <div>
         
@@ -21,20 +22,22 @@ const Questionlist = ({questions, handleResponse}) => {
             }
             <hr className='question-block horizontal-rule' style={{marginTop: '15px'}}/>
 
-            <div className='question-block horizontal-rule' style={{display: 'flex', justifyContent: 'end'}}>
-                <div className="score" style={{background: 'darkslategray', padding: '7.5px 15px'}}>
+            <div className={'question-block horizontal-rule'}>
                     {
                         isAllCompleted ?
-                        <small> 
-                            <span className="success-answer"> Correct: {successfulled + '/' + totalQuestions     }</span>
+                        <div className={isAllCompletedClass + " block-footer"}    >
+                        <div className='score'>
+                            <small className="success-answer"> Correct: {successfulled + '/' + totalQuestions     }</small>
                             <br/> 
-                            <span className="error-answer"> Incorrect: { totalQuestions - successfulled + '/' + totalQuestions     } </span>
-                        </small>
+                            <small className="error-answer"> Incorrect: { totalQuestions - successfulled + '/' + totalQuestions     } </small>
+                        </div>
+                        <button className='btn btn-default' type='reset' onClick={() => {localStorage.removeItem("listQuestions");window.location.reload(); }}>Try again</button>
+                        </div>
                         :
-                        <div>Progress : {allCompleted + '/' + totalQuestions}</div>
+                        <div class={isAllCompletedClass + "score"}>Progress : {allCompleted + '/' + totalQuestions}</div>
 
                     }
-                </div>
+
                 
             </div>
        </div>

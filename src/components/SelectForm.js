@@ -5,7 +5,9 @@ const SelectForm = ({options, refName, setSelectedOption, isComplete, answer }) 
 
     const handleChange = (event) => {   
         const index = event.target.selectedIndex;
+        
         const el = event.target.childNodes[index]
+        console.log(event.target)
         const optionid =  el.getAttribute('optionid');  
         setValue(event.target.value); 
        

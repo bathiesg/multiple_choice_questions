@@ -2,17 +2,16 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Questionlist from './components/QuestionList';
-// import Radio from './components/Radio';
-import Data from './data.json'; 
+import initialQuestions from './data.json'; 
 
 import useLocalStorage from './components/UseLocalStorage';
 
 function App() {
-  const [ listQuestions, setLisQuestions ] = useLocalStorage("listQuestions", Data);
+  const [ listQuestions, setLisQuestions ] = useLocalStorage("listQuestions", initialQuestions);
 
   const handleResponse = ({optionId, questionId, answer}) => {
     console.log({optionId, questionId, answer})
-    let mapped = listQuestions
+    let updatedListQuestions = listQuestions
     .map(currentQuestion => {
       if (currentQuestion.id === questionId) {
         currentQuestion = { 
@@ -34,7 +33,7 @@ function App() {
       return currentQuestion;
     })
  
-    setLisQuestions(mapped);
+    setLisQuestions(updatedListQuestions);
   }
 
   return (

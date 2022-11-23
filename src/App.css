@@ -36,14 +36,23 @@
   width: 100%;
   padding: 0 12px 12px 7px;
 }
-.Submit-button{
-  padding: 10px 25px;
-  background: #000;
-  border: 0;
-  margin-top: 11px;
+
+button {
   width: max-content;
   color: #fff;
-  font-weight: bold;  
+  font-weight: bold; 
+  border: 0;
+  padding: 10px 25px;
+}
+
+.Submit-button{  
+  background: #000;
+  margin-top: 11px;   
+}
+
+button[type='reset'] {
+  background-color: grey;
+  font-size: 21px;
 }
 
 .Submit-button:disabled {
@@ -138,4 +147,22 @@ input[type="radio"]:checked{
 .form-input:disabled {
 font-weight: normal;
 color: lightgrey;
+}
+
+.block-footer {
+  display: flex;
+  justify-content: end;
+}
+
+.block-footer.completed {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.block-footer.incomplete {
+width: max-content; 
+float: right;
+}
+.score {
+  padding: 7.5px 15px;
+  background-color: darkslategray;
 }
