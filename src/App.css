@@ -1,4 +1,4 @@
-.App { 
+.App {
   background-color: #282c34;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   /* padding-bottom: 50px; */
-  
 }
 
 .App-logo {
@@ -26,7 +25,6 @@
 
 .App-header {
   text-align: center;
-  
 }
 
 .Question-form {
@@ -36,21 +34,24 @@
   width: 100%;
   padding: 0 12px 12px 7px;
 }
+.Question-form select {
+  max-width: 100%;
+}
 
 button {
   width: max-content;
   color: #fff;
-  font-weight: bold; 
+  font-weight: bold;
   border: 0;
   padding: 10px 25px;
 }
 
-.Submit-button{  
+.Submit-button {
   background: #000;
-  margin-top: 11px;   
+  margin-top: 11px;
 }
 
-button[type='reset'] {
+button[type="reset"] {
   background-color: grey;
   font-size: 21px;
 }
@@ -59,46 +60,46 @@ button[type='reset'] {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
-  opacity: .65;
+  opacity: 0.65;
 }
 
-input:where([type="checkbox"], [type="radio"]){
-  -webkit-appearance : none;
-  appearance         : none;
-  width              : 22px;
-  height             : 22px;
-  margin             : calc(0.75em - 11px) 0.5rem 0 0;
-  vertical-align     : middle;
-  border             : 1px solid #ddd;
-  border-radius      : 0;
-  background         : transparent no-repeat center center;
+input:where([type="checkbox"], [type="radio"]) {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin: calc(0.75em - 11px) 0.5rem 0 0;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  background: transparent no-repeat center center;
 }
 
-
-
-input:where([type="checkbox"], [type="radio"]):where(:active:not(:disabled), :focus){
-  border-color : #696;
-  outline      : none;
+input:where([type="checkbox"], [type="radio"]):where(
+    :active:not(:disabled),
+    :focus
+  ) {
+  border-color: #696;
+  outline: none;
 }
 
 /* input:where([type="checkbox"], [type="radio"]):disabled{
   background : #eee;
 } */
 
-input[type="radio"]:checked{
-  background-image : url('checkbox.svg');
+input[type="radio"]:checked {
+  background-image: url("checkbox.svg");
 }
-
 
 .question-block {
   width: 50vw;
   margin: auto;
 }
 .question-block:not(.horizontal-rule) {
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
   border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.2);
-  padding: .75rem 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
 }
 
@@ -124,10 +125,10 @@ input[type="radio"]:checked{
   font-weight: 400;
   font-size: 80%;
   position: relative;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 .results-message.success {
   color: #155724;
@@ -142,11 +143,10 @@ input[type="radio"]:checked{
 
 .form-input {
   padding: 7px 20px;
-
 }
 .form-input:disabled {
-font-weight: normal;
-color: lightgrey;
+  font-weight: normal;
+  color: lightgrey;
 }
 
 .block-footer {
@@ -159,8 +159,8 @@ color: lightgrey;
   justify-content: space-between;
 }
 .block-footer.incomplete {
-width: max-content; 
-float: right;
+  width: max-content;
+  float: right;
 }
 .score {
   padding: 7.5px 15px;
